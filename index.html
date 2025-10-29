@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaik Sohail | Executive Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for Inter font and custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        // NEW THEME: Dark Slate, Bright Orange (High Contrast)
+                        'primary': '#222831', // Dark Slate (Headers, Main Text, Dark Backgrounds)
+                        'secondary': '#FF8C00', // Dark Orange (Accents, Highlights)
+                        'background': '#F9FAFA', // Very Light Gray/Off-White
+                        'card': '#FFFFFF', // Pure White for content blocks
+                        'dark-bg': '#111111', // Near Black for footer
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom style for subtle shadow effect and animations -->
+    <style>
+        /* Smooth Scroll Behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Card Shadow and Hover Effect */
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+            transition: transform 0.3s ease-in-out;
+        }
+        .card-shadow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* --- CSS Scroll Reveal Animations (Fade In Up) --- */
+        
+        /* Define the initial hidden state */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            will-change: opacity, transform;
+        }
+
+        /* Define the visible state */
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Add staggered delay for sequential elements */
+        #projects .animate-on-scroll:nth-child(1) { transition-delay: 0.1s; }
+        #projects .animate-on-scroll:nth-child(2) { transition-delay: 0.2s; }
+        #projects .animate-on-scroll:nth-child(3) { transition-delay: 0.3s; }
+        #projects .animate-on-scroll:nth-child(4) { transition-delay: 0.4s; }
+        
+        #skills .animate-on-scroll:nth-child(1) { transition-delay: 0.1s; }
+        #skills .animate-on-scroll:nth-child(2) { transition-delay: 0.2s; }
+        #skills .animate-on-scroll:nth-child(3) { transition-delay: 0.3s; }
+
+    </style>
+</head>
+<body class="bg-background font-sans text-gray-800">
+
+    <!-- Header & Navigation (Dark Slate/Orange) -->
+    <header class="bg-primary shadow-lg sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-white">SHAIK.SOHAIL</h1>
+            <nav class="space-x-4">
+                <a href="#about" class="text-white hover:text-secondary font-medium transition duration-150 ease-in-out">About</a>
+                <a href="#experience" class="text-white hover:text-secondary font-medium transition duration-150 ease-in-out">Experience</a>
+                <a href="#projects" class="text-white hover:text-secondary font-medium transition duration-150 ease-in-out">Projects</a>
+                <a href="#skills" class="text-white hover:text-secondary font-medium transition duration-150 ease-in-out">Skills</a>
+                <a href="#education" class="text-white hover:text-secondary font-medium transition duration-150 ease-in-out">Education</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Hero/About Section -->
+        <section id="about" class="mb-16 animate-on-scroll">
+            <div class="grid md:grid-cols-3 gap-8 items-center bg-card rounded-xl p-8 card-shadow">
+                <div class="col-span-2">
+                    <p class="text-lg text-secondary font-semibold mb-2">Technology & Manufacturing Executive</p>
+                    <h2 class="text-4xl sm:text-5xl font-extrabold text-primary mb-4 leading-tight">
+                        Tyre Industry Expert | Driving Process Optimization and <span class="text-secondary">Defect Control</span>
+                    </h2>
+                    <p class="text-xl text-gray-600">
+                        Technology Executive in the tyre industry with expertise in managing production trials, defect control, and process optimisation. Proficient in data analysis to drive operational efficiency. Good problem-solving, teamwork, and leadership skills in shift-based manufacturing environments.
+                    </p>
+                </div>
+                <!-- Contact Block (for quick access) -->
+                <div class="col-span-1 border-l-2 border-secondary pl-6 space-y-3">
+                    <h3 class="text-2xl font-semibold text-primary">Details</h3>
+                    <p class="text-gray-700"><strong class="font-medium">Location:</strong> Andra Pradesh, Tada</p>
+                    <p class="text-gray-700"><strong class="font-medium">Email:</strong> shaik.sohail0728@gmail.com</p>
+                    <p class="text-gray-700"><strong class="font-medium">Phone:</strong> +91 9391295388</p>
+                    <a href="#contact" class="inline-block mt-3 bg-secondary text-white font-bold py-2 px-6 rounded-full hover:bg-orange-700 transition duration-150 ease-in-out">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- -->
+
+        <!-- Work Experience Section (New Section based on Step 3) -->
+        <section id="experience" class="mb-16">
+            <h2 class="text-3xl font-bold text-primary mb-8 border-b-4 border-secondary pb-2 animate-on-scroll">Work Experience</h2>
+            <div class="bg-card rounded-xl p-6 card-shadow animate-on-scroll">
+                <div class="flex justify-between items-start mb-3">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-primary">Technology Executive</h3>
+                        <p class="text-lg text-gray-600">Apollo Tyres</p>
+                    </div>
+                    <p class="text-sm text-secondary font-medium">2023 - Present (2 Years)</p>
+                </div>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                    <li>Achieved **73%** in the Functional Score Card Audit.</li>
+                    <li>Contributed to achieving **BSCF Five Star** and **"SWORD OF HONOR"** recognition.</li>
+                    <li>Successfully increased Total Effective Equipment Performance (TEEPc) to **72%**.</li>
+                    <li>Trained about **60 employees** on Quality, Safety, and technical Standard Operating Procedures (SOPs).</li>
+                    <li>Led initiatives resulting in the reduction of **steel scrap from 0.52% to 0.40%**.</li>
+                    <li>Achieved a significant cycle time reduction in the PCR CATL machine, closing the gap from 3 seconds to **1.2 seconds** in weighted average cycle time.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- --- -->
+
+        <!-- Projects Section (Updated with 4 projects from Step 4) -->
+        <section id="projects" class="mb-16">
+            <h2 class="text-3xl font-bold text-primary mb-8 border-b-4 border-secondary pb-2 animate-on-scroll">Key Projects & Initiatives</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <!-- Project 1: TEEPC Improvement -->
+                <div class="bg-card rounded-xl p-6 card-shadow animate-on-scroll">
+                    <h3 class="text-xl font-semibold text-primary mb-3">  1. Production Efficiency Improvement (TEEPc)</h3>
+                    <p class="text-gray-700 mb-4 text-sm font-medium text-secondary">TBR TBM Process Optimization</p>
+                    <p class="text-gray-700 mb-4">
+                        Spearheaded a process optimization initiative to boost equipment utilization and output. Utilized QCC (Quality Control Circle) tools to conduct in-depth process analysis, identify critical bottlenecks, and streamline key operating procedures.
+                    </p>
+                    <p class="font-bold text-primary">Result: Successfully increased Total Effective Equipment Performance (TEEPc) from 68% to 72%.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full">TEEPc</span>
+                        <span class="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full">QCC Methodologies</span>
+                        <span class="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full">Process Mapping</span>
+                    </div>
+                </div>
+
+                <!-- Project 2: Performance Monitoring System -->
+                <div class="bg-card rounded-xl p-6 card-shadow animate-on-scroll">
+                    <h3 class="text-xl font-semibold text-primary mb-3">  2. Automated Departmental Performance Monitoring System</h3>
+                    <p class="text-gray-700 mb-4 text-sm font-medium text-secondary">Business Intelligence Platform Development</p>
+                    <p class="text-gray-700 mb-4">
+                        Developed and deployed a stand-alone business intelligence platform to track departmental performance against targets. Created 22 comprehensive Power BI dashboards with an automated data pipeline to provide real-time, data-driven insights.
+                    </p>
+                    <p class="font-bold text-primary">Impact: Enabled effective, data-driven decision-making for leadership.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full">Power BI</span>
+                        <span class="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full">Data Automation</span>
+                        <span class="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full">Data Modeling</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: Waste Reduction and Process Control -->
+                <div class="bg-card rounded-xl p-6 card-shadow animate-on-scroll">
+                    <h3 class="text-xl font-semibold text-primary mb-3">  3. Manufacturing Waste Reduction and Process Control</h3>
+                    <p class="text-gray-700 mb-4 text-sm font-medium text-secondary">Steel Scrap Minimization</p>
+                    <p class="text-gray-700 mb-4">
+                        Led a quality improvement project focused on minimizing steel scrap generation. Employed QCC methodologies and Root Cause Analysis to identify procedural loopholes and implement corrective changes. Established daily Power BI monitoring.
+                    </p>
+                    <p class="font-bold text-primary">Result: Significant scrap reduction from 0.52% to 0.40%, improving material utilization.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full">Root Cause Analysis</span>
+                        <span class="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full">QCC</span>
+                        <span class="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full">Waste Management</span>
+                    </div>
+                </div>
+
+                <!-- Project 4: Production Cycle Time Optimisation -->
+                <div class="bg-card rounded-xl p-6 card-shadow animate-on-scroll">
+                    <h3 class="text-xl font-semibold text-primary mb-3">  4. Production Cycle Time Optimisation via Analytical Tooling</h3>
+                    <p class="text-gray-700 mb-4 text-sm font-medium text-secondary">Global Analytical Tool Deployment</p>
+                    <p class="text-gray-700 mb-4">
+                        Designed and launched a "Global Analytical Tool" to enable daily, size-wise data analysis, providing precise inputs on process variance. Optimised and standardized machine and recipe parameters based on analytical insights.
+                    </p>
+                    <p class="font-bold text-primary">Result: Successfully reduced the machine's cycle time by 1.5 seconds, closing 50% of the targeted 3-second improvement gap.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full">Statistical Process Control</span>
+                        <span class="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full">Machine Optimization</span>
+                        <span class="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full">Data Analysis</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- --- -->
+
+        <!-- Skills Section (Updated with Step 5) -->
+        <section id="skills" class="mb-16">
+            <h2 class="text-3xl font-bold text-primary mb-8 border-b-4 border-secondary pb-2 animate-on-scroll">Technical & Management Skills</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Skill Category 1: Strategic Operations -->
+                <div class="bg-card p-6 rounded-xl card-shadow animate-on-scroll">
+                    <h3 class="text-xl font-semibold text-secondary mb-3">  Strategic Operations</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>Strategic Planning</li>
+                        <li>Lean Manufacturing</li>
+                        <li>Process Automation</li>
+                        <li>Production Planning</li>
+                        <li>SOP Adherence</li>
+                    </ul>
+                </div>
+
+                <!-- Skill Category 2: Leadership & Improvement -->
+                <div class="bg-card p-6 rounded-xl card-shadow animate-on-scroll">
+                    <h3 class="text-xl font-semibold text-secondary mb-3">  Leadership & Improvement</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>Leadership</li>
+                        <li>Teamwork & Development</li>
+                        <li>Problem-Solving</li>
+                        <li>Kaizen Principles</li>
+                        <li>Root Cause Analysis (RCA)</li>
+                    </ul>
+                </div>
+
+                <!-- Skill Category 3: Data & Technology -->
+                <div class="bg-card p-6 rounded-xl card-shadow animate-on-scroll">
+                    <h3 class="text-xl font-semibold text-secondary mb-3">  Data & Technology</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>Data Analytics (Power BI)</li>
+                        <li>Data Management</li>
+                        <li>Project Management</li>
+                        <li>QCC Methodologies</li>
+                        <li>Statistical Process Control</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- -->
+
+        <!-- Education Section (New Section based on Step 6) -->
+        <section id="education" class="mb-16">
+            <h2 class="text-3xl font-bold text-primary mb-8 border-b-4 border-secondary pb-2 animate-on-scroll">Education</h2>
+            <div class="bg-card rounded-xl p-6 card-shadow animate-on-scroll">
+                <div class="flex justify-between items-start mb-3">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-primary">B.Tech - Mechanical Engineering</h3>
+                        <p class="text-lg text-gray-600">PBR Visvodaya Institute of Technology and Science</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-md text-secondary font-medium">Graduated: 2023</p>
+                        <p class="text-md text-gray-600">Aggregate: 72.3%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- -->
+
+        <!-- Contact Section -->
+        <section id="contact" class="mb-16 animate-on-scroll">
+            <div class="text-center bg-primary text-white p-10 rounded-xl">
+                <h2 class="text-3xl font-bold mb-4">Let's Connect</h2>
+                <p class="text-lg mb-6">I am currently seeking challenging Executive roles where I can leverage my expertise in process optimization and operational leadership to drive business results.</p>
+                <div class="space-y-2">
+                    <p>Email: <a href="mailto:shaik.sohail0728@gmail.com" class="text-secondary hover:underline font-medium">shaik.sohail0728@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+919391295388" class="text-secondary hover:underline font-medium">+91 93912 95388</a></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (Near Black) - Added Social Links -->
+    <footer class="bg-dark-bg text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+             <div class="flex justify-center space-x-6 mb-3">
+                <a href="https://www.linkedin.com/in/shaik-sohail0728?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="text-gray-400 hover:text-secondary transition duration-150 ease-in-out font-medium">LinkedIn</a>
+                <a href="https://github.com/shaiksohail0728-debug" target="_blank" class="text-gray-400 hover:text-secondary transition duration-150 ease-in-out font-medium">GitHub</a>
+                <a href="https://www.instagram.com/sk_sohail.28?utm_source=qr&igsh=djFmYXIxajg1cGlh" target="_blank" class="text-gray-400 hover:text-secondary transition duration-150 ease-in-out font-medium">Instagram</a>
+            </div>
+            <p class="text-sm">&copy; 2025 Shaik Sohail. Built using Tailwind CSS.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Scroll Reveal (Intersection Observer API)
+        document.addEventListener('DOMContentLoaded', () => {
+            // Find all elements marked for animation
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            
+            // Configuration for the observer
+            const observerOptions = {
+                // Root is the viewport
+                root: null,
+                // Margin around the root (e.g., '0px 0px -50px 0px' means show when 50px from bottom)
+                rootMargin: '0px 0px -100px 0px', 
+                // Threshold of 0 means trigger as soon as even one pixel is visible
+                threshold: 0
+            };
+
+            // The observer callback function
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    // If the element is intersecting (visible in the viewport)
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        // Stop observing once it's visible to save resources
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+
+            // Create the Intersection Observer
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+            // Start observing each element
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
